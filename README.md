@@ -1,8 +1,6 @@
-# CocoaPods Expert Difficulty
+# CocoaPods Duplicated
 
-Is forcing everyone to update to `watchOS` or `tvOS` getting you down? Well now you can say "screw you CocoaPods, I know what I'm doing". Then CocoaPods will allow you to use any pod on any platform.
-
-This can break things. Obviously. So, err, use it for hacking, then do it properly.
+Skips the CocoaPods check that makes sure there aren't two vendored libraries with the same name.
 
 ## Installation
 
@@ -11,12 +9,12 @@ Use a Gemfile. [Here's a guide](http://guides.cocoapods.org/using/a-gemfile.html
 Gemfile:
 ```
 gem "cocoapods"
-gem "cocoapods-expert-difficulty"
+gem "cocoapods-duplicated"
 ```
 
 Podfile:
 ```
-plugin "cocoapods-expert-difficulty"
+plugin "cocoapods-DUPLICATED"
 [...]
 ```
 
