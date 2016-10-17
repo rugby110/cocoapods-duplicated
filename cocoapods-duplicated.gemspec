@@ -9,6 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Pedro Piñera']
   spec.email         = ['pepi@soundcloud.com']
   spec.description   = %q{Skips the check for duplicated libraries and frameworks.}
+  spec.summary   = %q{Skips the check for duplicated libraries and frameworks.}
   spec.homepage      = 'https://github.com/soundcloud/cocoapods-duplicated'
   spec.license       = 'MIT'
 
