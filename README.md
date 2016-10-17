@@ -14,7 +14,7 @@ gem "cocoapods-duplicated"
 
 Podfile:
 ```
-plugin "cocoapods-DUPLICATED"
+plugin "cocoapods-duplicated"
 [...]
 ```
 
