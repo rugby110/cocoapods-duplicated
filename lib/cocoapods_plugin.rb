@@ -1,31 +1,19 @@
 require 'cocoapods'
 
-module CocoaPodsExpert
+module CocoapodsDuplicated
 
-  Pod::HooksManager.register('cocoapods-expert-difficulty', :pre_install) do |context, _|
-    Pod::UI.titled_section 'Supporting all platforms in CocoaPods' do
+  Pod::HooksManager.register('cocoapods-duplicated', :pre_install) do |context, _|
+    Pod::UI.titled_section 'Disabling check for duplicate framework and library names' do
     end
   end
 
 end
 
 module Pod
-  class Specification
-    alias_method :tvos_supported_platform_names, :supported_platform_names
+  class Installer
 
-    def supported_platform_names
-      # if there's no Podfile config do default
-      return tvos_supported_platform_names unless validates_for_expert
-
-      # Otherwise return all platforms for all pods
-      names = PLATFORMS
-      names.map { |name| Platform.new(name, deployment_target(name)) }
+    def verify_no_duplicate_framework_and_library_names
     end
-
-    def validates_for_expert
-      podfile = Pod::Config.instance.podfile
-      podfile && podfile.plugins && !podfile.plugins['cocoapods-expert-difficulty'].nil?
-    end
-
+    
   end
 end
